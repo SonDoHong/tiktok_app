@@ -1,14 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Fragment } from "react";
+
+import { publicRoute } from "./router";
+import { DefaultLayout } from './component/layout'
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <Router>
+            <Routes>
+                {publicRoute.map((route, index) => {
+                    let Layout = DefaultLayout;
 
-  return (
-    <h2>Hello world</h2>
-  )
+                    const Page = route.element;
+
+                    if(route.layout) {
+                        Layout = route.layout
+                    } else if(route.layout === null) {
+                        Layout = Fragment
+                    }
+
+                    return <Route key={index} path={route.path} element={<Layout><Page /></Layout>} />
+                })}
+            </Routes>
+        </Router>
+    );
 }
 
-export default App
+export default App;
