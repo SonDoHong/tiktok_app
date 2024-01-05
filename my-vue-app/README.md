@@ -1,8 +1,8 @@
-# React + Vite
+## Cấu hình sử dụng CSS, SASS (93)
+1. Tạo GlobalStyles component
+2. Cài thư viện SASS: `npm i -D sass`
+3. Reset CSS: `npm install --save normalize.css` (thư viện normalize)
+4. Default CSS: font-family, font-size, line-height
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Dựng khung layout mặc định (95)
+- cài thư viện classnames: `npm i classnames`
