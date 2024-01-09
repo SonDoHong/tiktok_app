@@ -6,3 +6,8 @@
 
 ## Dựng khung layout mặc định (95)
 - cài thư viện classnames: `npm i classnames`
+
+## Cài đặt thư viện tippyjs/react
+`npm i @tippyjs/react`
+- Popper (người bật lên)
+- Sử dụng để hiển thị propdown (hiện element con)
