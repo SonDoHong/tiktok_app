@@ -7,6 +7,8 @@ import Tippy from '@tippyjs/react';
 import { Wrapper as PopperWrapper } from '../../../../component/Popper'
 import styles from './Header.module.scss'
 import images from '../../../../assets/images'
+import AccountItem from '../../../AccountItem';
+import Button from '../../../Button';
 
 const cx = classNames.bind(styles)
 
@@ -17,7 +19,7 @@ function Header() {
 
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([1, 2, 3])
+            setSearchResult([])
         }, 3000);
     }, [])
     
@@ -32,11 +34,15 @@ function Header() {
                     interactive={true}
                     visible={searchResult.length > 0}
                     render={attrs => (
-                        <PopperWrapper>
-                            <div className='box' tabIndex='-1' {...attrs}>
-                                hihihhi
-                            </div>
-                        </PopperWrapper>
+                        <div className={cx('search-result')} tabIndex='-1' {...attrs}>
+                            <PopperWrapper>
+                                <h4 className={cx('search-title')}>Accounts</h4>
+                                <AccountItem />
+                                <AccountItem />
+                                <AccountItem />
+                                <AccountItem />
+                            </PopperWrapper>
+                        </div>
                     )}
                 >
                     <div className={cx('search')}>
@@ -54,8 +60,8 @@ function Header() {
                 </Tippy>
 
                 <div className={cx('actions')}>
-                    <button>Upload</button>
-                    <button>Log In</button>
+                    <Button text>Upload</Button>
+                    <Button primary>Log in</Button>
                 </div>
             </div>
         </header>
