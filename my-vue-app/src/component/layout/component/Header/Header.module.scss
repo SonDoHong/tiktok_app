@@ -110,7 +110,11 @@
 }
 
 .actions-btn {
+    position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.2rem;
     padding: 4px 12px;
     color: #161823;
     background-color: transparent;
@@ -129,6 +133,7 @@
 .user-avatar {
     width: 32px;
     height: 32px;
-    object-fit: cover;
+    margin-left: 12px;
     border-radius: 50%;
+    object-fit: cover;
 }

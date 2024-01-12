@@ -9,7 +9,6 @@ import {
     faEarthAsia,
     faKeyboard,
     faCircleQuestion,
-    faCloudUpload,
     faGear,
     faCoins,
     faUser,
@@ -25,6 +24,8 @@ import images from '../../../../assets/images'
 import AccountItem from '../../../AccountItem';
 import Button from '../../../Button';
 import Menu from '../../../Popper/Menu';
+import Image from '../../../Image';
+import ActionItem from './ActionItem';
 
 const cx = classNames.bind(styles)
 
@@ -132,15 +133,9 @@ function Header() {
 
                 <div className={cx('actions')}>
                     {currentUser ? (
-                        <Tippy
-                            placement='bottom'
-                            content='Upload video'
-                            delay={[0, 200]}
-                        >
-                            <button className={cx('actions-btn')}>
-                                <FontAwesomeIcon icon={faCloudUpload} />
-                            </button>
-                        </Tippy>
+                        <>
+                            <ActionItem className={cx('actions-btn')}/>
+                        </>
                     ) : (
                         <>
                             <Button text>Upload</Button>
@@ -150,10 +145,11 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS}>
                         {currentUser ? (
-                            <img 
+                            <Image 
                                 className={cx('user-avatar')} 
                                 src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4d5baa83758e9090e6d9c60b826c377d~c5_100x100.jpeg?lk3s=a5d48078&x-expires=1705140000&x-signature=A7sOjmg1ikywJdWtSe2NP7cWjcw%3D" 
-                                alt="andrelifehack" 
+                                alt="andrelifehack"
+                                fallback='https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/f838f66973d28808c47e62671645054f.jpeg?lk3s=a5d48078&x-expires=1705219200&x-signature=hsz0ECkB6IUNtu0LxX0VXGRAzAM%3D'
                             />
                         ): (
                             <button className={cx('more-btn')}>
