@@ -1,8 +1,8 @@
 import Tippy from '@tippyjs/react';
-import classNames from 'classnames/bind'
+import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css';
 
-import styles from './ActionItem.module.scss'
+import styles from './ActionItem.module.scss';
 import { InboxIcon, MessageIcon, PlusIcon } from '../../../../Icons';
 
 const cx = classNames.bind(styles)
