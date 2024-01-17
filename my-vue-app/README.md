@@ -35,3 +35,11 @@ b2:
 ```js
     encodeURIComponent(string) // biên dịch ký tự sang mã hóa
 ```
+
+```js
+    // phương thức startWuth() là kiểm tra chữ cái or ký tự đầu tiền có đúng với tham số truyền vào không trả về true/false
+    const string = ' ãnccdscsax'
+
+    console.log(string.startsWith('ã')) // false
+    console.log(string.startsWith(' ')) // true
+```
