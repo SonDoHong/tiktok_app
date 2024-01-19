@@ -3,14 +3,21 @@ import Following from "../pages/Following";
 import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Upload from "../pages/Upload";
-import routesConfig from '../config/routes'
+import Live from "../pages/Live";
+import config from "../config";
 
 // Public route
+// layout {
+//     DefaultLayout,
+//     headerOnly,
+//     null
+// }
 const publicRoute = [
-    {path: routesConfig.home, element: Home},
-    {path: routesConfig.following, element: Following, layout: null},
-    {path: routesConfig.profile, element: Profile},
-    {path: routesConfig.upload, element: Upload, layout: HeaderOnly},
+    {path: config.routes.home, element: Home},
+    {path: config.routes.following, element: Following},
+    {path: config.routes.profile, element: Profile},
+    {path: config.routes.upload, element: Upload, layout: HeaderOnly},
+    {path: config.routes.live, element: Live},
 ]
 
 const privateRoute = [
