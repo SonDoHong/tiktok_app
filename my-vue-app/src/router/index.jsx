@@ -13,15 +13,13 @@ import config from "../config";
 //     null
 // }
 const publicRoute = [
-    {path: config.routes.home, element: Home},
-    {path: config.routes.following, element: Following},
-    {path: config.routes.profile, element: Profile},
-    {path: config.routes.upload, element: Upload, layout: HeaderOnly},
-    {path: config.routes.live, element: Live},
-]
+    { path: config.routes.home, element: Home, slideUp: true },
+    { path: config.routes.following, element: Following, slideUp: true },
+    { path: config.routes.profile, element: Profile },
+    { path: config.routes.upload, element: Upload, layout: HeaderOnly },
+    { path: config.routes.live, element: Live },
+];
 
-const privateRoute = [
+const privateRoute = [];
 
-]
-
-export { publicRoute, privateRoute }
+export { publicRoute, privateRoute };

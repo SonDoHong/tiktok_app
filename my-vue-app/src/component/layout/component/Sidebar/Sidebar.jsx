@@ -39,7 +39,7 @@ function Sidebar() {
                 />
             </Menu>
 
-            <SuggestedAccounts label='Suggested Accounts' />
+            <SuggestedAccounts preview label='Suggested Accounts' />
 
             <SuggestedAccounts label='Following accounts' />
         </div>

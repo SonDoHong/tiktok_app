@@ -1,0 +1,87 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.video-item {
+    padding: 20px 0;
+    width: 592px;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.video-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 12px;
+}
+
+.name-link {
+    display: flex;
+    align-items: end;
+    height: 28px;
+    line-height: 1;
+
+    &:hover .nick-name {
+        text-decoration: underline;
+    }
+}
+
+.nick-name {
+    margin-right: 4px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.full-name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.description {
+    margin-top: 6px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.music-link {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.music-icon {
+    margin-right: 5px;
+    color: var(--text-color);
+}
+
+.follow-btn {
+    margin-top: 8px;
+    padding: 8px;
+}
+
+.video {
+    width: 360px;
+    border-radius: 8px;
+}

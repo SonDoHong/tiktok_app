@@ -1,4 +1,16 @@
 .wrapper {
-    width: 356px;
+    position: fixed;
+    top: var(--default-layout-header-height);
+    bottom: 0;
+    width: var(--default-layout-sidebar-width);
     padding: 20px 0 26px 8px;
+    overflow-y: scroll;
+
+    &:hover {
+        transition: opacity 2s ease;
+    }
+
+    &:not(:hover)::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
 }

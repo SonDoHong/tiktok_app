@@ -3,12 +3,14 @@ import { Fragment } from "react";
 
 import { publicRoute } from "./router";
 import { DefaultLayout } from './component/layout'
+import SlideUp from "./component/SlideUp";
 
 function App() {
     return (
         <Router>
             <Routes>
                 {publicRoute.map((route, index) => {
+                    
                     let Layout = DefaultLayout;
 
                     const Page = route.element;
@@ -19,7 +21,7 @@ function App() {
                         Layout = Fragment
                     }
 
-                    return <Route key={index} path={route.path} element={<Layout><Page /></Layout>} />
+                    return <Route key={index} path={route.path} element={<Layout><Page />{route.slideUp && <SlideUp />}</Layout>} />
                 })}
             </Routes>
         </Router>

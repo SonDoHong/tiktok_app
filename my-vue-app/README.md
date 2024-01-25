@@ -24,7 +24,8 @@
 b1: `npm i axios` // cài đặt
 b2:
 
-
+## Bắt sự kiện Scroll
+-   VD trong file `component/SlideUp`
 
 
 
@@ -37,7 +38,7 @@ b2:
 ```
 
 ```js
-    // phương thức startWuth() là kiểm tra chữ cái or ký tự đầu tiền có đúng với tham số truyền vào không trả về true/false
+    // phương thức startWith() là kiểm tra chữ cái or ký tự đầu tiền có đúng với tham số truyền vào không trả về true/false
     const string = ' ãnccdscsax'
 
     console.log(string.startsWith('ã')) // false

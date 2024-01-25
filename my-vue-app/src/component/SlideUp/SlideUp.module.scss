@@ -1,0 +1,112 @@
+.wrapper {
+    position: fixed;
+    bottom: 0;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transform: translateY(40px);
+    transition: transform 0.3s linear;
+    font-size: 1.4rem;
+    font-weight: 700;
+    z-index: 100;
+
+    &.abc {
+        transform: translateY(0);
+    }
+}
+
+.wrap-download {
+    position: relative;
+    margin-bottom: 12px;
+    min-width: 400px;
+}
+
+.btn-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-download {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 7px 16px;
+    color: #161823bf;
+    font-size: 1.4rem;
+    transform: scale(100%); 
+    transition: all 0.3s ease;
+    transform-origin: right bottom;
+
+    &.animation {
+        transform: scale(0);
+    }
+}
+
+.download-list {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    padding-left: 16px;
+    padding-right: 48px;
+    border-radius: 8px;
+    background-color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    transform: scale(0); 
+    transition: all 0.3s ease;
+    transform-origin: right bottom;
+    
+    &.animation {
+        transform: scale(100%);
+    }
+}
+
+.download-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    border-radius: 8px;
+    margin: 6px 0;
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f8f8f8;
+    }
+}
+
+.download-item-icon {
+
+}
+
+.download-item-label {
+    margin-left: 8px;
+}
+
+.btn-slide-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+
+    color: var(--white);
+    background-color: var(--primary);
+    cursor: pointer;
+
+    &:hover {
+        transition: background-color 0.2s ease;
+        background-color: #ef2a50;
+    }
+}
