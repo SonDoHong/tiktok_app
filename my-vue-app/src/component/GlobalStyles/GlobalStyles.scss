@@ -24,7 +24,8 @@ html {
 }
 
 body {
-    // overflow-y: overlay;
+    overflow-y: overlay;
+    overflow-x: overlay;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
